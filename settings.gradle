@@ -1,0 +1,1 @@
+include ':gopay-ui', ':gopay-api', ':gopay-example'
