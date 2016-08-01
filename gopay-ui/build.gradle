@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
 
+group = 'cz.gopay.android.ui'
+version = '1.0.0'
+
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.0"

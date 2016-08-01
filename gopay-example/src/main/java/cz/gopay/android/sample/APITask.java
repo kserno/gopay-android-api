@@ -6,10 +6,10 @@ import android.os.AsyncTask;
 import android.view.View;
 
 import cz.gopay.android.ui.GPWebViewActivity;
-import cz.gopay.api.v3.android.GPAndroidConnector;
-import cz.gopay.api.v3.exception.GPClientException;
-import cz.gopay.api.v3.model.payment.BasePayment;
-import cz.gopay.api.v3.model.payment.Payment;
+import cz.gopay.androidapi.v3.android.GPAndroidConnector;
+import cz.gopay.androidapi.v3.exception.GPClientException;
+import cz.gopay.androidapi.v3.model.payment.BasePayment;
+import cz.gopay.androidapi.v3.model.payment.Payment;
 
 /**
  * Created by Frantisek Sichinger on 22.3.16.

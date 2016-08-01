@@ -1,24 +1,22 @@
 package cz.gopay.android.sample;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ProgressBar;
 
 import java.util.Arrays;
 
-import cz.gopay.api.v3.model.common.Currency;
-import cz.gopay.api.v3.model.payment.BasePayment;
-import cz.gopay.api.v3.model.payment.BasePaymentBuilder;
-import cz.gopay.api.v3.model.payment.Lang;
-import cz.gopay.api.v3.model.payment.PaymentFactory;
-import cz.gopay.api.v3.model.payment.support.Callback;
-import cz.gopay.api.v3.model.payment.support.Payer;
-import cz.gopay.api.v3.model.payment.support.PayerBuilder;
-import cz.gopay.api.v3.model.payment.support.PaymentInstrument;
+import cz.gopay.androidapi.v3.model.common.Currency;
+import cz.gopay.androidapi.v3.model.payment.BasePayment;
+import cz.gopay.androidapi.v3.model.payment.BasePaymentBuilder;
+import cz.gopay.androidapi.v3.model.payment.Lang;
+import cz.gopay.androidapi.v3.model.payment.PaymentFactory;
+import cz.gopay.androidapi.v3.model.payment.support.Callback;
+import cz.gopay.androidapi.v3.model.payment.support.Payer;
+import cz.gopay.androidapi.v3.model.payment.support.PayerBuilder;
+import cz.gopay.androidapi.v3.model.payment.support.PaymentInstrument;
 
 
 public class SampleActivity extends AppCompatActivity implements GPActivity {

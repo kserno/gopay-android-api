@@ -1,7 +1,8 @@
+
 apply plugin: 'com.android.library'
 apply plugin: 'idea'
 
-group = 'cz.gopay.api'
+group = 'cz.gopay.androidapi'
 version = '1.0.0'
 
 android {
