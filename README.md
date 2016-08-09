@@ -183,14 +183,14 @@ try {
 ```
  
  
- For more code samples check out source code of module (gopay-example)[https://github.com/gopaycommunity/gopay-android-api/tree/master/gopay-example/src/main/java/cz/gopay/android/sample]
+ For more code samples check out source code of module (https://github.com/gopaycommunity/gopay-android-api/tree/master/gopay-example/src/main/java/cz/gopay/android/sample)[gopay-example]
  
  
 
     
 ####  Gopay UI 
 
-UI module uses webview, which you may initialize once you retrieve gateway url.
+UI module uses Webview, which you may initialize once you retrieve a gateway url.
 
     Intent intent = new Intent(context, GPWebViewActivity.class);
     /* gateway url */
