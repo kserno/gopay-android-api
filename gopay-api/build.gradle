@@ -3,7 +3,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'idea'
 
 group = 'cz.gopay.androidapi'
-version = '1.0.0'
+version = '1.0.1'
 
 android {
     compileSdkVersion 22
