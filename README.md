@@ -25,7 +25,7 @@ Artifacts are located in the maven jcenter repository.
 //model classes, connector
 compile 'cz.gopay:androidapi:1.0.1'
 
-//webview
+//webview (in a case you would like to use our module gopay-ui register its activity into your android application manifest)
 compile 'cz.gopay:androidui:1.0.1'
 
 ```
