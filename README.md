@@ -23,10 +23,10 @@ Artifacts are located in the maven jcenter repository.
 
 ```bash
 //model classes, connector
-compile 'cz.gopay:androidapi:1.0.0'
+compile 'cz.gopay:androidapi:1.0.1'
 
 //webview
-compile 'cz.gopay:androidui:1.0.0'
+compile 'cz.gopay:androidui:1.0.1'
 
 ```
 ## OAuth
