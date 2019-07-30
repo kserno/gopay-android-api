@@ -29,6 +29,7 @@ public abstract class AbstractGPConnector implements IGPConnector {
     public static int CONNECTION_SETUP_TO = 1;
     public static int CONNECTION_SERVICE_TO = 1;
 
+
     protected String apiUrl;
 
     protected AccessToken accessToken;

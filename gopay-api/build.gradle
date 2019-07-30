@@ -6,8 +6,7 @@ group = 'cz.gopay.androidapi'
 version = '1.0.1'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.0"
+    compileSdkVersion 28
 
     packagingOptions {
         exclude 'META-INF/NOTICE'
@@ -16,6 +15,7 @@ android {
     }
     defaultConfig {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        targetSdkVersion 28
     }
 }
 
@@ -24,19 +24,18 @@ repositories {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 
-    compile group: 'org.apache.httpcomponents', name: 'httpclient-android', version: '4.3.5.1'
 
-    compile group: 'org.apache.httpcomponents', name: 'fluent-hc', version: '4.3.5'
+    implementation("com.squareup.okhttp3:okhttp:4.0.1")
 
-    compile group: 'com.google.code.gson', name: 'gson', version: '2.6.1'
 
-    compile group: 'com.android.support' , name: 'appcompat-v7',  version: '22.2.0'
 
-    compile group: 'com.neovisionaries' , name: 'nv-i18n' , version: '1.13'
+    implementation 'com.google.code.gson:gson:2.8.5'
 
-    androidTestCompile 'junit:junit:4.12'
+    implementation 'com.neovisionaries:nv-i18n:1.25'
+
+    androidTestImplementation 'junit:junit:4.12'
 }
 
 
