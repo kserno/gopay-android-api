@@ -3,7 +3,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'idea'
 
 group = 'cz.gopay.androidapi'
-version = '1.0.1'
+version = '2.0.0'
 
 android {
     compileSdkVersion 28
@@ -25,11 +25,8 @@ repositories {
 
 dependencies {
     testImplementation 'junit:junit:4.12'
-
-
+    
     implementation("com.squareup.okhttp3:okhttp:4.0.1")
-
-
 
     implementation 'com.google.code.gson:gson:2.8.5'
 
