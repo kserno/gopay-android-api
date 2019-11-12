@@ -80,37 +80,43 @@ public class AndroidPaymentClient extends GsonAbstractImpl implements PaymentCli
     public Payment createRecurrentPayment(AuthHeader authHeader, Long id, NextPayment createPayment) {
         Response response = null;
 
-
-        /*
+        RequestBody body = RequestBody.create(marshall(createPayment), MediaType.parse(APPLICATION_JSON));
         try {
-            response = Request.
-                    Post(apiUrl + "/payments/payment/" + id + "/create-recurrence")
-                    .addHeader(ACCEPT, APPLICATION_JSON).
-                            addHeader(CONTENT_TYPE, ContentType.APPLICATION_JSON.toString())
+            Request request = new Request.Builder()
+                    .url(apiUrl + "/payments/payment/" + id + "/create-recurrence")
+                    .addHeader(ACCEPT, APPLICATION_JSON)
+                    .addHeader(CONTENT_TYPE, APPLICATION_JSON)
                     .addHeader(AUTHORIZATION, authHeader.getAuhorization())
-                    .bodyString(marshall(createPayment), ContentType.TEXT_XML).
-                            execute();
+                    .post(body)
+                    .build();
+
+            response = okHttpClient.newCall(request).execute();
+
         } catch (IOException ex) {
             throw new WebClientException(ex);
         }
-*/
+
         return unMarshall(response, Payment.class);
     }
 
     @Override
     public PaymentResult voidRecurrence(AuthHeader authHeader, Long id) {
         Response response = null;
-/*
+
+
         try {
-            response = Request.
-                    Post(apiUrl + "/payments/payment/" + id + "/void-recurrence")
-                    .addHeader(ACCEPT, ContentType.APPLICATION_JSON.toString())
-                    .addHeader(CONTENT_TYPE, ContentType.APPLICATION_FORM_URLENCODED.toString())
-                    .addHeader(AUTHORIZATION, authHeader.getAuhorization()).
-                            execute();
+            Request request = new Request.Builder()
+                    .url(apiUrl + "/payments/payment/" + id + "/void-recurrence")
+                    .addHeader(ACCEPT, APPLICATION_JSON)
+                    .addHeader(CONTENT_TYPE, APPLICATION_URLENCODED)
+                    .addHeader(AUTHORIZATION, authHeader.getAuhorization())
+                    .build();
+
+            response = okHttpClient.newCall(request).execute();
+
         } catch (IOException ex) {
             throw new WebClientException(ex);
-        }*/
+        }
 
         return unMarshall(response, PaymentResult.class);
     }
@@ -119,55 +125,69 @@ public class AndroidPaymentClient extends GsonAbstractImpl implements PaymentCli
     public PaymentResult capturePayment(AuthHeader authHeader, Long id) {
         Response response = null;
 
-        /*
+        RequestBody emptyBody = RequestBody.create("", null);
+
         try {
-            response = Request.
-                    Post(apiUrl + "/payments/payment/" + id + "/capture")
-                    .addHeader(ACCEPT, ContentType.APPLICATION_JSON.toString())
-                    .addHeader(CONTENT_TYPE, ContentType.APPLICATION_FORM_URLENCODED.toString())
-                    .addHeader(AUTHORIZATION, authHeader.getAuhorization()).
-                            execute();
+            Request request = new Request.Builder()
+                    .post(emptyBody)
+                    .url(apiUrl + "/payments/payment/" + id + "/capture")
+                    .addHeader(ACCEPT, APPLICATION_JSON)
+                    .addHeader(CONTENT_TYPE, APPLICATION_URLENCODED)
+                    .addHeader(AUTHORIZATION, authHeader.getAuhorization())
+                    .build();
+
+            response = okHttpClient.newCall(request).execute();
+
         } catch (IOException ex) {
             throw new WebClientException(ex);
-        }*/
+        }
 
         return unMarshall(response, PaymentResult.class);
+
+
     }
 
     @Override
     public PaymentResult voidAuthorization(AuthHeader authHeader, Long id) {
         Response response = null;
 
-        /*
+        RequestBody emptyBody = RequestBody.create("", null);
+
         try {
-            response = Request.
-                    Post(apiUrl + "/payments/payment/" + id + "/void-authorization")
-                    .addHeader(ACCEPT, ContentType.APPLICATION_JSON.toString())
-                    .addHeader(CONTENT_TYPE, ContentType.APPLICATION_FORM_URLENCODED.toString())
-                    .addHeader(AUTHORIZATION, authHeader.getAuhorization()).
-                            execute();
+            Request request = new Request.Builder()
+                    .post(emptyBody)
+                    .url(apiUrl + "/payments/payment/" + id + "/void-authorization")
+                    .addHeader(ACCEPT, APPLICATION_JSON)
+                    .addHeader(CONTENT_TYPE, APPLICATION_URLENCODED)
+                    .addHeader(AUTHORIZATION, authHeader.getAuhorization())
+                    .build();
+
+            response = okHttpClient.newCall(request).execute();
         } catch (IOException ex) {
             throw new WebClientException(ex);
-        }*/
+        }
 
         return unMarshall(response, PaymentResult.class);
-
     }
 
     @Override
     public Payment getPayment(AuthHeader authHeader, Long id) {
         Response response = null;
 
-        /*
         try {
-            response = Request.Get(apiUrl + "/payments/payment/" + id).
-                    addHeader(ACCEPT, ContentType.APPLICATION_JSON.toString())
-                    .addHeader(CONTENT_TYPE, ContentType.APPLICATION_FORM_URLENCODED.toString())
-                    .addHeader(AUTHORIZATION, authHeader.getAuhorization()).
-                            execute();
+            Request request = new Request.Builder()
+                    .get()
+                    .url(apiUrl + "/payments/payment/" + id)
+                    .addHeader(ACCEPT, APPLICATION_JSON)
+                    .addHeader(CONTENT_TYPE, APPLICATION_URLENCODED)
+                    .addHeader(AUTHORIZATION, authHeader.getAuhorization())
+                    .build();
+
+            response = okHttpClient.newCall(request).execute();
         } catch (IOException ex) {
             throw new WebClientException(ex);
-        }*/
+        }
+
 
         return unMarshall(response, Payment.class);
     }
