@@ -59,7 +59,7 @@ public class BasePaymentBuilder extends AbstractPaymentBuilder<BasePayment,BaseP
     }
 
     public BasePaymentBuilder withCallback(String returnUrl, String notificationUrl) {
-        return withCallback(Callback.of(notificationUrl, returnUrl));
+        return withCallback(Callback.of(returnUrl, notificationUrl));
     }
 
     public BasePaymentBuilder withCallback(Callback callback) {
